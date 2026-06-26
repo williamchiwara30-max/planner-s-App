@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Planner App</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Planner App</h1>
+        <div class="menu">
+            <button onclick="showPage('dashboard')">Dashboard</button>
+            <button onclick="showPage('tasks')">Tasks</button>
+            <button onclick="showPage('notes')">Notes</button>
+            <button onclick="showPage('calendar')">Calendar</button>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="dashboard" class="page active">
+            <h1>Dashboard</h1>
+            <div class="cards">
+                <div class="card1">
+                    <h2 id="taskCount">0</h2>
+                    <p>Total Tasks</p>
+                </div>
+                <div class="card2">
+                    <h2 id="completeCount">0</h2>
+                    <p>Completed</p>
+                </div>
+                <div class="card3">
+                    <h2 id="todayDate"></h2>
+                    <p>Today's Date</p>
+                </div>
+            </div>
+        </section>
+
+<!-- tasks-page -->
+        <section class="task-page">
+            <h1>Tasks</h1>
+            <div class="task-input">
+                <input type="text" placeholder="Enter a task">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+<!-- notes-section -->
+        <section class="notes-page">
+            <h1>Notes</h1>
+            <textarea id="noteInput" placeholder="Write your notes here"></textarea>
+            <button onclick="saveNote">Save Note</button>
+
+            <div id="savedNote"></div>
+        </section>
+        <!-- calendar -->
+         <section id="calendar" class="page">
+            <h1>Calendar</h1>
+            <div class="calendar-box">
+                <h2 id="month"></h2>
+                <div class="calendarGrid"></div>
+            </div>
+         </section>
+
+         </div>
+         <script src="script.js"></script>
+</body>
+</html>
